@@ -8,7 +8,7 @@ endif
 let g:loaded_change_font_size= 1
 
 if has('gui_gtk2') || has('gui_gtk3')
-  let g:gf_size_orig = matchstr(&guifont, '\( \)\@<=\d\+$')
+  autocmd GUIEnter * let g:gf_size_orig = matchstr(&guifont, '\( \)\@<=\d\+$')
   function! FontSizePlus()
     let l:gf_size_whole = matchstr(&guifont, '\( \)\@<=\d\+$')
     if l:gf_size_whole < 28
@@ -29,7 +29,7 @@ if has('gui_gtk2') || has('gui_gtk3')
     let &guifont = substitute(&guifont, ' \d\+$', ' '.g:gf_size_orig, '')
   endfunction
 elseif has('gui_win32')
-  let g:gf_size_orig = matchstr(&guifont, '\(:h\)\@<=\d\+\(:W\d\+\)\?\(:b\)\?\(:cANSI\)\?\(:qDRAFT\)\?$')
+  autocmd GUIEnter * let g:gf_size_orig = matchstr(&guifont, '\(:h\)\@<=\d\+\(:W\d\+\)\?\(:b\)\?\(:cANSI\)\?\(:qDRAFT\)\?$')
   function! FontSizePlus()
     let l:gf_size_whole = matchstr(&guifont, '\(:h\)\@<=\d\+\(:W\d\+\)\?\(:b\)\?\(:cANSI\)\?\(:qDRAFT\)\?$')
     let l:gf_weight = matchstr(&guifont, '\(:W\d\+\)\?$')
