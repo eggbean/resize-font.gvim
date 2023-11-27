@@ -1,8 +1,9 @@
-" File:         change_font_size.vim
+" Plugin:       eggbean/resize-font.gvim
 " Description:  Change gvim font size using keyboard or mousewheel
 " Author:       Jason Gomez <jason@jinkosystems.co.uk>
+" Credit:       Originally based on https://vi.stackexchange.com/a/3104/37532
 
-if exists('g:loaded_change_font_size') || !has('gui_running')
+if !has('gui_running') || exists('g:loaded_change_font_size')
   finish
 endif
 let g:loaded_change_font_size= 1
@@ -62,10 +63,9 @@ elseif has('gui_win32')
     let &guifont = substitute(&guifont, '\(:h\d\+\)\(:W\d\+\)\?\(:b\)\?\(:cANSI\)\?\(:qDRAFT\)\?$', ':h'.g:gf_size_orig.l:gf_weight.l:gf_bold.l:gf_cansi.l:gf_qdraft, '')
   endfunction
 endif
-if has('gui_running')
-  nmap <C-=> :call FontSizePlus()<CR>
-  nmap     :call FontSizeMinus()<CR>
-  nmap <C-0> :call FontSizeOriginal()<CR>
-  map <silent> <C-ScrollWheelUp>   :call FontSizePlus()<CR>
-  map <silent> <C-ScrollWheelDown> :call FontSizeMinus()<CR>
-endif
+
+nmap <C-=> :call FontSizePlus()<CR>
+nmap     :call FontSizeMinus()<CR>
+nmap <C-0> :call FontSizeOriginal()<CR>
+map <silent> <C-ScrollWheelUp>   :call FontSizePlus()<CR>
+map <silent> <C-ScrollWheelDown> :call FontSizeMinus()<CR>

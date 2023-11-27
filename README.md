@@ -1,10 +1,10 @@
 # resize-font.gvim
-#### (for Linux and Windows)
 
 ![Resizing gvim](resizing_gvim.gif)
 
-This plugin for gvim adds the ability to change font size (and therefore window
-size) using the same methods used in most web browsers and some other graphical text editors.
+#### (for Linux and Windows)
+
+This plugin for gvim adds the ability to change font size (and therefore window size too) using the same methods used in most web browsers, terminal emulators and some other graphical text editors.
 
 I may add Mac support if this plugin attracts any interest.
 
@@ -15,7 +15,7 @@ I may add Mac support if this plugin attracts any interest.
 |<kbd>Ctrl</kbd> + <kbd>=</kbd>| Increases text size |
 |<kbd>Ctrl</kbd> + <kbd>-</kbd>| Decreases text size |
 |<kbd>Ctrl</kbd> + <kbd>0</kbd>| Resets text to original size |
-|<kbd>Ctrl</kbd> + <kbd>mousewheel</kbd> | resize text/window |
+|<kbd>Ctrl</kbd> + <kbd>mousewheel</kbd>| Resize text |
 
 In terminal vim or neovim the plugin exits and doesn't do anything.
 
