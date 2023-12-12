@@ -28,9 +28,9 @@ Second, the mousewheel mappings will not work if you’re using a version before
 If you don’t like these mappings, you can map your own in your .vimrc with:
 
 ```vim
-nnoremap {LHS} <Plug>CfsPlus`,
-nnoremap {LHS} <Plug>CfsMinus`, and
-nnoremap {LHS} <Plug>CfsOriginal`
+nnoremap {LHS} <Plug>CfsPlus
+nnoremap {LHS} <Plug>CfsMinus
+nnoremap {LHS} <Plug>CfsOriginal
 ```
 
 ...where `{LHS}` is the key combination you want.
